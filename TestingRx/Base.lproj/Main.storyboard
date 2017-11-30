@@ -38,12 +38,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="namePhonePad" keyboardAppearance="alert" smartDashesType="yes" smartInsertDeleteType="yes" smartQuotesType="yes" textContentType="name"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcZ-MI-uLj">
+                                <rect key="frame" x="8" y="175" width="359" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="EYK-9t-eev"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hcZ-MI-uLj" secondAttribute="trailing" constant="8" id="Gr1-3R-qcS"/>
                             <constraint firstItem="IA2-fE-ZlE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ha0-CR-LME"/>
+                            <constraint firstItem="hcZ-MI-uLj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Kqb-JE-pwq"/>
                             <constraint firstItem="bmw-Jl-cM9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NLj-pS-EO6"/>
                             <constraint firstItem="IA2-fE-ZlE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nyw-WX-TjW"/>
+                            <constraint firstItem="bmw-Jl-cM9" firstAttribute="top" secondItem="hcZ-MI-uLj" secondAttribute="bottom" constant="8" id="Tc1-fS-Tlv"/>
                             <constraint firstItem="IA2-fE-ZlE" firstAttribute="top" secondItem="bmw-Jl-cM9" secondAttribute="bottom" constant="50" id="e4m-x1-UVK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
