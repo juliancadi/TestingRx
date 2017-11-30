@@ -47,9 +47,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IaV-6o-aZr">
+                                <rect key="frame" x="162.5" y="241" width="52" height="34.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="GEF-H6-Skl"/>
+                                </constraints>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="IaV-6o-aZr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4zT-39-Vgi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hcZ-MI-uLj" secondAttribute="trailing" constant="8" id="Gr1-3R-qcS"/>
                             <constraint firstItem="IA2-fE-ZlE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ha0-CR-LME"/>
                             <constraint firstItem="hcZ-MI-uLj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Kqb-JE-pwq"/>
@@ -57,16 +64,20 @@
                             <constraint firstItem="IA2-fE-ZlE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nyw-WX-TjW"/>
                             <constraint firstItem="bmw-Jl-cM9" firstAttribute="top" secondItem="hcZ-MI-uLj" secondAttribute="bottom" constant="8" id="Tc1-fS-Tlv"/>
                             <constraint firstItem="IA2-fE-ZlE" firstAttribute="top" secondItem="bmw-Jl-cM9" secondAttribute="bottom" constant="50" id="e4m-x1-UVK"/>
+                            <constraint firstItem="IaV-6o-aZr" firstAttribute="top" secondItem="bmw-Jl-cM9" secondAttribute="bottom" constant="8" id="rEA-n2-aVq"/>
+                            <constraint firstItem="IA2-fE-ZlE" firstAttribute="top" secondItem="IaV-6o-aZr" secondAttribute="bottom" constant="8" id="uuy-ZJ-9en"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="colorSwitch" destination="IaV-6o-aZr" id="Fx4-hN-i9Z"/>
                         <outlet property="nameLabel" destination="IA2-fE-ZlE" id="JLf-4J-nrR"/>
                         <outlet property="textField" destination="bmw-Jl-cM9" id="WvO-oB-HPJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

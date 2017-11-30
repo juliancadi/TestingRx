@@ -16,25 +16,30 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
-    var name: Variable<String> = Variable("Try it! 👆")
+    @IBOutlet weak var colorSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         textField.becomeFirstResponder()
-        
-        name.asObservable()
-            .bind(to: self.nameLabel.rx.text)
-            .disposed(by: disposeBag)
+        // Bind UI
+        bindUI()
     }
     
-    @objc func textFieldDidChange(_ textField: UITextField) {
-        updateText()
-    }
-    
-    func updateText() {
-        self.name.value = textField.text == nil || textField.text == "" ? "It works! 😉" : textField.text!
+    func bindUI() {
+        Observable.combineLatest(
+            colorSwitch.rx.isOn,
+            textField.rx.text,
+            resultSelector: { colorOn, currentName in
+                let output: String = "Tipped: \(currentName!)"
+                if colorOn {
+                    let a1 = [ NSAttributedStringKey.foregroundColor: UIColor.green ]
+                    return NSAttributedString(string: output, attributes: a1)
+                } else {
+                    return NSAttributedString(string: output)
+                }
+        })
+        .bind(to: nameLabel.rx.attributedText)
+        .disposed(by: disposeBag)
     }
     
 }
